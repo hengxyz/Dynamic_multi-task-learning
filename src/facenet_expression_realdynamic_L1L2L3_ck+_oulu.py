@@ -4,7 +4,7 @@
 #### simultaneous rather than the indepednant training of the two tasks in the Transfer Learning FaceLiveNet
 #### The object is to improve the problem of the degrade of the performance of the previous version FaceLiveNet
 #### when the expressional facial images used as the input for face verification task.
-### Auther: mingzuheng, 25/12/2017 #########
+
 ##
 ##############################  FACIAL EXPRESSION DATASETS   ##############################
 ### FER2013(unconstrained/webimages): 0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral
@@ -24,6 +24,10 @@
 ###             as the experiment on CK+. 1920 frames totally used for training/test, 10-fold cross-validation)
 ##############################  FACIAL EXPRESSION DATASETS   ##############################
 
+"""Functions for building the face recognition network.
+"""
+# MIT License
+#### copyright at Auther: mingzuheng, 25/03/2019 #########
 
 from __future__ import absolute_import
 from __future__ import division
@@ -56,10 +60,6 @@ import imp
 from tensorflow.python import pywrap_tensorflow
 from tensorflow.python import debug as tf_debug
 
-#### libs of DavaideSanderburg ####
-sys.path.insert(0, '../lib/facenet/src')
-import facenet
-import lfw
 
 ###### user custom lib
 import facenet_ext
@@ -94,7 +94,7 @@ def main(args):
 
     # Store some git revision info in a text file in the log directory
     src_path,_ = os.path.split(os.path.realpath(__file__))
-    facenet.store_revision_info(src_path, log_dir, ' '.join(sys.argv))
+    facenet_ext.store_revision_info(src_path, log_dir, ' '.join(sys.argv))
 
     np.random.seed(seed=args.seed)
     random.seed(args.seed)
@@ -196,7 +196,7 @@ def main(args):
     pretrained_model = None
     if args.pretrained_model:
         pretrained_model = os.path.expanduser(args.pretrained_model)
-        meta_file, ckpt_file = facenet.get_model_filenames(os.path.expanduser(args.pretrained_model))
+        meta_file, ckpt_file = facenet_ext.get_model_filenames(os.path.expanduser(args.pretrained_model))
         print('Pre-trained model: %s' % pretrained_model)
     
     if args.lfw_dir:
@@ -284,7 +284,7 @@ def main(args):
                 image = tf.image.decode_png(file_contents)
                 #image = tf.image.decode_jpeg(file_contents)
                 if args.random_rotate:
-                    image = tf.py_func(facenet.random_rotate_image, [image], tf.uint8)
+                    image = tf.py_func(facenet_ext.random_rotate_image, [image], tf.uint8)
                 if args.random_crop:
                     image = tf.random_crop(image, [args.image_size, args.image_size, 3])
                 else:
@@ -418,13 +418,6 @@ def main(args):
         ##################### Full loss ###################################
         #### loss_full = loss_verif_percentage*loss_verif + loss_expr_percentage*loss_expr
         loss_full = tf.add_n([tf.multiply(loss_verif_percentage, loss_verif)]+[tf.multiply(loss_expr_percentage, loss_expr)], name='weight_fullcrossentropy')
-        #weight_fullcrossentropy = tf.add_n([tf.multiply(loss_verif_percentage, loss_verif_n)]+[tf.multiply(loss_expr_percentage, loss_expr_n)], name='weight_fullcrossentropy')
-        #weight_fullcrossentropy = tf.add_n([tf.multiply(loss_verif_percentage+args.loss_weight_base, loss_verif_n)]+[tf.multiply(loss_expr_percentage, loss_expr_n)], name='weight_fullcrossentropy')
-        #loss_full = tf.reduce_mean(loss_full_n, name='loss_full')
-        #loss_full = tf.multiply(tf.transpose(softmax_lossweights),
-        #loss_full = tf.add_n([loss_verif]+[loss_expr_percentage*loss_expr], name='loss_full')
-        #loss_full = tf.add_n([1*loss_verif]+[args.expression_loss_factor*loss_expr], name='loss_full')
-        #loss_full = tf.matmul(tf.transpose(softmax_lossweights), [loss_verif, loss_expr])
 
 
         # #### Training accuracy of softmax: check the underfitting or overfiting #############################
@@ -434,20 +427,6 @@ def main(args):
         softmax_acc_expr = tf.reduce_mean(tf.cast(correct_prediction_expr, tf.float32))
         ########################################################################################################
 
-        ###### Automatic lower learning rate lr= lr_start * decay_factor^(global_step/decaystepwidth),
-        ###### if decay_factor = 1.0 it means the learning rate will not decay automaically, otherwise it will decay
-        ###### from the given learning rate in function of the factor, current global step and decay ste width.
-        # if args.learning_rate>0.0:
-        #     # learning_rate = tf.train.exponential_decay(learning_rate_placeholder, global_step,
-        #     #                                            args.learning_rate_decay_epochs*args.epoch_size,
-        #     #                                            args.learning_rate_decay_factor, staircase=True)
-        #     learning_rate = tf.train.exponential_decay(learning_rate_placeholder, global_step,
-        #                                                 args.learning_rate_decay_epochs*args.epoch_size,
-        #                                                 1.0, staircase=True)
-        # else:
-        #     learning_rate = tf.train.exponential_decay(learning_rate_placeholder, global_step,
-        #                                                args.learning_rate_decay_epochs * args.epoch_size,
-        #                                                1.0, staircase=True)
         learning_rate = tf.train.exponential_decay(learning_rate_placeholder, global_step,
                                                    args.learning_rate_decay_epochs * args.epoch_size,
                                                    1.0, staircase=True)
@@ -488,12 +467,7 @@ def main(args):
         # Build the summary operation based on the TF collection of Summaries.
         summary_op = tf.summary.merge_all()
 
-        # train_op_verif, grads_verif, grads_clip_verif = train_BP.train(loss_verif, global_step, args.optimizer,
-        #     learning_rate, args.moving_average_decay, update_gradient_vars_verif, summary_op, args.log_histograms)
-        # train_op_expr, grads_expr, grads_clip_expr = train_BP.train(loss_expr, global_step, args.optimizer,
-        #     learning_rate, args.moving_average_decay, update_gradient_vars_expr, summary_op, args.log_histograms)
-        # train_op_mainstem, grads_full, grads_clip_full = train_BP.train(loss_full, global_step, args.optimizer,
-        #     learning_rate, args.moving_average_decay, update_gradient_vars_networks, summary_op, args.log_histograms)
+
         vars = update_gradient_vars_verif + update_gradient_vars_expr + update_gradient_vars_mainstem
         train_op_mainstem, grads_full, grads_clip_full = train_BP.train(loss_full, global_step, args.optimizer,
             learning_rate, args.moving_average_decay, vars, summary_op, args.log_histograms)
@@ -513,10 +487,6 @@ def main(args):
         summary_writer = tf.summary.FileWriter(log_dir, sess.graph)
         tf.train.start_queue_runners(sess=sess) ## wakeup the queue: start the queue operating defined by the tf.train.batch_join
 
-        ### debug tfdeb #####
-        # sess = tf_debug.LocalCLIDebugWrapperSession(sess, thread_name_filter="MainThread$")
-        # sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
-        ### debug tfdeb #####
 
         with sess.as_default():
 
@@ -536,15 +506,7 @@ def main(args):
                 restore_vars = []
                 if isExpressionModel:
                     print('>>>>>>>>>>>> Loading directly the pretrained FaceLiveNet model :%s.....'% os.path.join(os.path.expanduser(args.pretrained_model), ckpt_file))
-                    # for var in tf.global_variables():
-                    #     if 'center' not in var.op.name:
-                    #         restore_vars.append(var)
-                    #
-                    # paracnt, parasize = count_paras(restore_vars)
-                    # print('The number of the loading parameters in the model(FaceLiveNet) is %dM, ......the size is : %dM bytes' % (
-                    #         paracnt / 1e6, parasize / 1e6))
-                    # restore_saver_expression = tf.train.Saver(restore_vars)
-                    # restore_saver_expression.restore(sess,os.path.join(os.path.expanduser(args.pretrained_model), ckpt_file))
+
 
                     restore_vars_verif = []
                     restore_vars_expre = []
@@ -577,9 +539,7 @@ def main(args):
                     restore_saver_expression = tf.train.Saver(restore_vars_expre)
                     restore_saver_expression.restore(sess, os.path.join(os.path.expanduser(args.pretrained_model), ckpt_file))
 
-                    # restore_vars_global = tf.global_variables()
-                    # restore_saver_global = tf.train.Saver(restore_vars_global)
-                    # restore_saver_global.restore(sess, os.path.join(os.path.expanduser(args.pretrained_model), ckpt_file))
+
                 else:
                     restore_vars_verif = []
                     restore_vars_expre = []
@@ -602,10 +562,7 @@ def main(args):
                     j = 0
                     for i, var in enumerate(restore_vars_expre):
                         var_name = str.split(str(var.op.name), 'InceptionResnetV1_expression/')[1]
-                        #### only used for the block8 branch cut case ##########
-                                #if 'block8_branchcut_1/Conv2d_1x1' in var_name:
-                        #	continue
-                        #### only used for the block8 branch cut case ##########
+
                         if 'Repeat' in var_name:
                             var_name = str.split(var_name,'Repeat')[1]
                             pos = var_name.index('/')
@@ -613,9 +570,7 @@ def main(args):
                             if 'block8_branchcut_1/' in var_name:
                                 var_name = str.split(var_name,'block8_branchcut_1/')[1]
                                 var_name = 'block8_1/'+var_name
-                            #var_name = 'block8_1'+var_name[1:]
-                            #var_name = 'block8_'+var_name
-                        #for var0 in restore_vars:
+
                         for var0 in restore_vars_verif:
                             if var_name in str(var0.op.name):
                                 sess.run(var.assign(var0))
@@ -878,12 +833,12 @@ def train(args, sess, epoch, image_list, label_list, index_dequeue_op, enqueue_o
     if args.learning_rate>0.0:
         lr = args.learning_rate
     else:
-        lr = facenet.get_learning_rate_from_file(learning_rate_schedule_file, epoch_current)
+        lr = facenet_ext.get_learning_rate_from_file(learning_rate_schedule_file, epoch_current)
 
     if args.learning_rate_dyn>0.0:
         lr_dyn = args.learning_rate_dyn
     else:
-        lr_dyn = facenet.get_learning_rate_from_file(learning_rate_schedule_file, epoch_current)
+        lr_dyn = facenet_ext.get_learning_rate_from_file(learning_rate_schedule_file, epoch_current)
 
     print('Index_dequeue_op....')
     index_epoch = sess.run(index_dequeue_op)
@@ -1045,8 +1000,6 @@ def train(args, sess, epoch, image_list, label_list, index_dequeue_op, enqueue_o
              np.exp(np.mean(logits_lossweights_embedings_[:,0])), np.exp(np.mean(logits_lossweights_embedings_[:,1])), \
              np.exp(np.mean(logits_lossweights_[:,0])), np.exp(np.mean(logits_lossweights_[:,1])), loss_full_, softmax_acc_verif_, \
              softmax_acc_expr_, np.sum(reg_loss), np.mean(prelogits_center_loss_verif_n_), learning_rate_, learning_rate_dyn_))
-        #print('Training each_expression_acc: 0=Angry %2.4f, 1=Disgust %2.4f, 2=Fear %2.4f, 3=Happy %2.4f, 4=Sad %2.4f, 5=Surprise %2.4f, 6=Neutral %2.4f' % (train_each_expr_acc[0], train_each_expr_acc[1], train_each_expr_acc[2], train_each_expr_acc[3], train_each_expr_acc[4], train_each_expr_acc[5],train_each_expr_acc[6]))
-        #print ('Test each_expression_acc: 0=Angry %2.4f, 1=Disgust %2.4f, 2=Fear %2.4f, 3=Happy %2.4f, 4=Sad %2.4f, 5=Surprise %2.4f, 6=Neutral %2.4f'%(each_expr_acc[0], each_expr_acc[1], each_expr_acc[2], each_expr_acc[3], each_expr_acc[4], each_expr_acc[5], each_expr_acc[6]))
         print('Face Authentication : acc_auth %f, best_acc_authen %f (acc_expr_pairs:%f, acc_exprrecog: %f)'%(acc_expr_paris*acc_expression, best_acc_faceauthen, best_authen_verif_exprpairs, best_authen_exprecog))
         print('Face verification on LFW: acc_LFW %f, val_LFW %f, far_LFW %f, best_acc_faceverif_LFW %f'%(acc, val, far, best_acc_faceverif_lfw))
         print('Face verification on Expr_paris: acc_expr_pairs %f, val_expr_paris %f, far_expr_pairs %f, best_acc_faceverif_expr %f'%(acc_expr_paris, val_expr_paris, far_expr_paris, best_acc_faceverif_expr))
@@ -1100,60 +1053,6 @@ def train(args, sess, epoch, image_list, label_list, index_dequeue_op, enqueue_o
     return step, train_each_expr_acc, softmax_acc_verif_, softmax_acc_expr_, loss_verif_, loss_expr_, cross_entropy_mean_verif_, cross_entropy_mean_expr_, np.sum(reg_loss),  np.mean(prelogits_center_loss_verif_n_), acc, learning_rate_
 
 
-
-# def evaluate(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, labels_expr_placeholder, phase_train_placeholder, batch_size_placeholder, 
-#         embeddings, label_id_batch, image_paths, actual_issame, batch_size, nrof_folds, log_dir, step, summary_writer,
-#              evaluate_mode, keep_probability_placeholder, dataset, best_acc):
-#     start_time = time.time()
-#     # Run forward pass to calculate embeddings
-#     print('Evaluating face verification on '+dataset+'...')
-#     nrof_images = len(actual_issame) * 2
-#     nrof_batches = int(nrof_images / batch_size) ##floor division
-#     nrof_enque = batch_size*nrof_batches
-
-#     actual_issame = actual_issame[0:int(nrof_enque/2)]##left the elements in the final batch if it is not enough
-
-#     # Enqueue one epoch of image paths and labels
-#     labels_array = np.expand_dims(np.arange(0,nrof_enque),1)
-#     image_paths_array = np.expand_dims(np.array(image_paths[0:nrof_enque]),1)
-#     sess.run(enqueue_op, {image_paths_placeholder: image_paths_array, labels_id_placeholder: labels_array, labels_expr_placeholder: labels_array})
-    
-#     embedding_size = embeddings.get_shape()[1]
-
-#     emb_array = np.zeros((nrof_enque, embedding_size))
-#     lab_array = np.zeros((nrof_enque,))
-#     for _ in range(nrof_batches):
-#         feed_dict = {phase_train_placeholder:False, batch_size_placeholder:batch_size, keep_probability_placeholder: 1.0}
-#         emb, lab = sess.run([embeddings, label_id_batch], feed_dict=feed_dict)
-#         lab_array[lab] = lab
-#         emb_array[lab] = emb
-        
-#     assert np.array_equal(lab_array, np.arange(nrof_enque))==True, 'Wrong labels used for evaluation, possibly caused by training examples left in the input pipeline'
-#     if evaluate_mode == 'Euclidian':
-#         _, _, accuracy, val, val_std, far, fp_idx, fn_idx,best_threshold, val_threshold = lfw.evaluate(emb_array, actual_issame, nrof_folds=nrof_folds)
-#     if evaluate_mode == 'similarity':
-#         pca = PCA(n_components=128)
-#         pca.fit(emb_array)
-#         emb_array_pca = pca.transform(emb_array)
-#         _, _, accuracy, val, val_std, far, fp_idx, fn_idx,best_threshold, val_threshold = lfw.evaluate_cosine(emb_array_pca, actual_issame, nrof_folds=nrof_folds)
-
-#     print('Accuracy: %1.3f+-%1.3f' % (np.mean(accuracy), np.std(accuracy)))
-#     print('Validation rate: %2.5f+-%2.5f @ FAR=%2.5f' % (val, val_std, far))
-#     lfw_time = time.time() - start_time
-#     # Add validation loss and accuracy to summary
-#     summary = tf.Summary()
-#     #pylint: disable=maybe-no-member
-#     summary.value.add(tag=dataset+'/accuracy', simple_value=np.mean(accuracy))
-#     summary.value.add(tag=dataset+'/val_rate', simple_value=val)
-#     summary.value.add(tag=dataset + '/far_rate', simple_value=far)
-#     summary.value.add(tag='time/'+dataset, simple_value=lfw_time)
-#     summary_writer.add_summary(summary, step)
-#     with open(os.path.join(log_dir,dataset+'_result.txt'),'at') as f:
-#         f.write('%d\t%.5f\t%.5f\t%.5f\t%.5f\n' % (step, np.mean(accuracy), val, far, best_acc))
-
-#     acc = np.mean(accuracy)
-#     return acc, val, far
-
 def evaluate(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, labels_expr_placeholder, phase_train_placeholder, batch_size_placeholder, 
         embeddings, label_id_batch, image_paths, actual_issame, batch_size, nrof_folds, log_dir, step, summary_writer,
              evaluate_mode, keep_probability_placeholder, dataset, best_acc, args):
@@ -1177,7 +1076,7 @@ def evaluate(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, l
         start_index = ii* batch_size
         end_index = min((ii + 1) * batch_size, nrof_images)
         paths_batch = image_paths[start_index:end_index]
-        images = facenet.load_data(paths_batch, False, False, args.image_size)
+        images = facenet_ext.load_data(paths_batch, False, False, args.image_size)
 
         feed_dict = {phase_train_placeholder:False, batch_size_placeholder:batch_size, keep_probability_placeholder: 1.0, images_placeholder: images}
         emb = sess.run(embeddings, feed_dict=feed_dict)
@@ -1185,12 +1084,12 @@ def evaluate(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, l
         
     # assert np.array_equal(lab_array, np.arange(nrof_enque))==True, 'Wrong labels used for evaluation, possibly caused by training examples left in the input pipeline'
     if evaluate_mode == 'Euclidian':
-        _, _, accuracy, val, val_std, far, fp_idx, fn_idx,best_threshold, val_threshold = lfw.evaluate(emb_array, actual_issame, nrof_folds=nrof_folds)
+        _, _, accuracy, val, val_std, far, fp_idx, fn_idx,best_threshold, val_threshold = lfw_ext.evaluate(emb_array, actual_issame, nrof_folds=nrof_folds)
     if evaluate_mode == 'similarity':
         pca = PCA(n_components=128)
         pca.fit(emb_array)
         emb_array_pca = pca.transform(emb_array)
-        _, _, accuracy, val, val_std, far, fp_idx, fn_idx,best_threshold, val_threshold = lfw.evaluate_cosine(emb_array_pca, actual_issame, nrof_folds=nrof_folds)
+        _, _, accuracy, val, val_std, far, fp_idx, fn_idx,best_threshold, val_threshold = lfw_ext.evaluate_cosine(emb_array_pca, actual_issame, nrof_folds=nrof_folds)
 
     print('Accuracy: %1.3f+-%1.3f' % (np.mean(accuracy), np.std(accuracy)))
     print('Validation rate: %2.5f+-%2.5f @ FAR=%2.5f' % (val, val_std, far))
@@ -1208,130 +1107,6 @@ def evaluate(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, l
 
     acc = np.mean(accuracy)
     return acc, val, far
-
-
-# def evaluate_expression(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, labels_expr_placeholder,
-#              batch_size_placeholder,
-#              logits, label_expr_batch, image_paths, actual_expre, batch_size, log_dir, step, summary_writer,
-#              keep_probability_placeholder,input_queue,phase_train_placeholder_expression, phase_train_placeholder):
-#     start_time = time.time()
-#     # Run forward pass to calculate embeddings
-#     #print('Runnning forward pass on FER2013 images')
-#     print('Runnning forward pass on expression images')
-#     nrof_images = len(actual_expre)
-
-#     #batch_size = 128
-
-#     ############## Enqueue complete batches ##############################
-#     nrof_batches = nrof_images // batch_size ## The floor division to get the maximum number of the complete batch
-#     nrof_enqueue = nrof_batches * batch_size
-
-#     ############## Allow enqueue incomplete batch  ##############################
-#     # nrof_batches = int(math.ceil(nrof_images / batch_size)) ## To get the left elements in the queue when the nrof_images can be not exact divided by batch_size
-#     # nrof_enqueue = nrof_images
-
-#     # Enqueue one epoch of image paths and labels
-#     #labels_array = np.expand_dims(actual_expre[0:nrof_enqueue], 1)
-#     labels_array = np.expand_dims(np.arange(nrof_enqueue),1)  ## labels_array is not the label of expression of the image, it is the number of the image in the queue
-#     image_paths_array = np.expand_dims(np.array(image_paths[0:nrof_enqueue]), 1)
-#     sess.run(enqueue_op, {image_paths_placeholder: image_paths_array, labels_id_placeholder: labels_array, labels_expr_placeholder: labels_array})
-#     #filenames, label = sess.run(input_queue.dequeue())
-#     logits_size = logits.get_shape()[1]
-
-
-#     logits_array = np.zeros((nrof_enqueue, logits_size), dtype=float)
-#     ## label_batch_array is not the label of expression of the image , it is the number of the image in the queue.
-#     ## label_batch_array is used for keeping the order of the labels and images after the batch_join operation which
-#     ## generates the batch in multi-thread scrambling the order
-#     label_batch_array = np.zeros(nrof_enqueue, dtype=int)
-
-#     for ii in range(nrof_batches):
-#         print('nrof_batches %d'%ii)
-#         feed_dict = {phase_train_placeholder: False, phase_train_placeholder_expression: False, batch_size_placeholder: batch_size,
-#                      keep_probability_placeholder: 1.0}
-#         ### Capture the exceptions when the queue is exhausted for producing the batch
-#         try:
-#             logits_batch, lab = sess.run([logits, label_expr_batch], feed_dict=feed_dict)
-#         except tf.errors.OutOfRangeError:
-#             print('Exceptions: the queue is exhausted !')
-
-#         label_batch_array[lab] = lab
-#         logits_array[lab] = logits_batch
-#     assert np.array_equal(label_batch_array, np.arange(nrof_enqueue)) == True, 'Wrong labels used for evaluation, possibly caused by training examples left in the input pipeline'
-
-#     actual_expre_batch = actual_expre[0:nrof_enqueue]
-#     express_probs = np.exp(logits_array) / np.tile(np.reshape(np.sum(np.exp(logits_array), 1), (logits_array.shape[0], 1)), (1, logits_array.shape[1]))
-#     nrof_expression = express_probs.shape[1]
-#     expressions_predict = np.argmax(express_probs, 1)
-#     #### Training accuracy of softmax: check the underfitting or overfiting #############################
-#     correct_prediction = np.equal(expressions_predict, actual_expre_batch)
-#     test_expr_acc = np.mean(correct_prediction)
-
-#     ############# the accuracy of each expression  ################
-#     ### Initializing the confusion matrix
-#     exp_cnt = np.zeros(nrof_expression)
-#     expredict_cnt = np.zeros(nrof_expression)
-#     express_probs_confus_matrix = np.zeros((nrof_expression, nrof_expression))
-#     express_recog_images = []
-#     for i in range(nrof_expression):
-#         express_recog_images.append([])
-#         for _ in range(nrof_expression):
-#             express_recog_images[i].append([])
-
-#     ### Fill the confusion matrix
-#     for i in range(label_batch_array.shape[0]):
-#         lab  = actual_expre_batch[i]
-#         exp_cnt[lab] += 1
-#         express_probs_confus_matrix[lab, expressions_predict[i]] += 1
-#         express_recog_images[lab][expressions_predict[i]].append(image_paths_array[i])
-#         if  lab == expressions_predict[i]:
-#             expredict_cnt[lab] += 1
-#     test_each_expr_acc = expredict_cnt/exp_cnt
-#     express_probs_confus_matrix /= np.expand_dims(exp_cnt,1)
-#     ###############################################
-
-#     print('%d expressions recognition accuracy is: %f' % (nrof_expression, test_expr_acc))
-
-#     ############### Saving recognition CONFUSION Results images of the 7 expressions  #####################
-#     print('Saving expression recognition images corresponding to the confusion matrix in %s...'%log_dir)
-
-#     images_exists = glob.glob(os.path.join(log_dir, 'confusion_matrix_images*'))
-#     for folder in images_exists:
-#         shutil.rmtree(folder)
-
-#     confus_images_folder = os.path.join(log_dir, 'confusion_matrix_images_%dsteps' % step)
-
-#     os.mkdir(confus_images_folder)
-
-#     ## mkdir for the confusion matrix of each expression
-#     for i in range(nrof_expression):
-#         gt_folder = os.path.join(confus_images_folder, '%d')%i
-#         os.mkdir(gt_folder)
-#         for j in range(nrof_expression):
-#             predict_folder = os.path.join(confus_images_folder, '%d', '%d')%(i,j)
-#             os.mkdir(predict_folder)
-
-#     ## copy the predicting images to the corresponding folder of the predicting expression
-#     for i, labs_predict in enumerate(express_recog_images):
-#         for j, lab_predict in enumerate(labs_predict):
-#             dst = os.path.join(confus_images_folder, '%d', '%d')%(i,j)
-#             for img in express_recog_images[i][j]:
-#                 shutil.copy(img[0], dst)
-#     ############### Saving recognition results images of the 7 expressions  #####################
-
-#     fer_time = time.time() - start_time
-#     # Add validation loss and accuracy to summary
-#     summary = tf.Summary()
-#     # pylint: disable=maybe-no-member
-#     summary.value.add(tag='fer/accuracy', simple_value=test_expr_acc)
-#     summary.value.add(tag='time/fer', simple_value=fer_time)
-#     summary_writer.add_summary(summary, step)
-#     #with open(os.path.join(log_dir, 'Fer2013_result.txt'), 'at') as f:
-#     with open(os.path.join(log_dir, 'Expression_result.txt'), 'at') as f:
-#         f.write('%d\t%.5f\n' % (step, test_expr_acc))
-
-
-#     return test_expr_acc, test_each_expr_acc, exp_cnt, expredict_cnt, express_probs_confus_matrix, express_recog_images
 
 def evaluate_expression(sess, enqueue_op, image_paths_placeholder, labels_id_placeholder, labels_expr_placeholder,
              batch_size_placeholder,
@@ -1380,7 +1155,7 @@ def evaluate_expression(sess, enqueue_op, image_paths_placeholder, labels_id_pla
         end_index = min((ii + 1) * batch_size, nrof_images)
         paths_batch = image_paths[start_index:end_index]
         #### load image including the image whiten operation
-        images = facenet.load_data(paths_batch, False, False, args.image_size)
+        images = facenet_ext.load_data(paths_batch, False, False, args.image_size)
         feed_dict = {phase_train_placeholder: False, phase_train_placeholder_expression: False, batch_size_placeholder: batch_size,
                      keep_probability_placeholder: 1.0, images_placeholder: images}
         ### Capture the exceptions when the queue is exhausted for producing the batch
@@ -1506,9 +1281,9 @@ def parse_arguments(argv):
     parser = argparse.ArgumentParser()
     
     parser.add_argument('--logs_base_dir', type=str, 
-        help='Directory where to write event logs.', default='~/logs/facenet')
+        help='Directory where to write event logs.', default='~/logs/')
     parser.add_argument('--models_base_dir', type=str,
-        help='Directory where to write trained models and checkpoints.', default='~/models/facenet')
+        help='Directory where to write trained models and checkpoints.', default='~/models/')
     parser.add_argument('--gpu_memory_fraction', type=float,
         help='Upper bound on the amount of GPU memory that will be used by the process.', default=1.0)
     parser.add_argument('--pretrained_model', type=str,

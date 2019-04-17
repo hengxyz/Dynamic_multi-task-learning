@@ -1,26 +1,7 @@
 """Functions for building the face recognition network.
 """
 # MIT License
-#
-# Copyright (c) 2016 David Sandberg
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+#### copyright at Auther: mingzuheng, 25/03/2019 #########
 
 # pylint: disable=missing-docstring
 from __future__ import absolute_import
@@ -49,12 +30,27 @@ from itertools import islice
 import itertools
 import sys
 
-#### libs of DavaideSanderburg ####
-sys.path.insert(0, '../lib/facenet/src')
-import facenet
+
+def store_revision_info(src_path, output_dir, arg_string):
+    # #  git hash
+    # gitproc = Popen(['git', 'rev-parse', 'HEAD'], stdout = PIPE, cwd=src_path)
+    # (stdout, _) = gitproc.communicate()
+    # git_hash = stdout.strip()
+    #
+    # # Get local changes
+    # gitproc = Popen(['git', 'diff', 'HEAD'], stdout = PIPE, cwd=src_path)
+    # (stdout, _) = gitproc.communicate()
+    # git_diff = stdout.strip()
+
+    # Store a text file in the log directory
+    rev_info_filename = os.path.join(output_dir, 'revision_info.txt')
+    with open(rev_info_filename, "w") as text_file:
+        text_file.write('arguments: %s\n--------------------\n' % arg_string)
+        # text_file.write('git hash: %s\n--------------------\n' % git_hash)
+        # text_file.write('%s' % git_diff)
 
 
-# import h5py
+
 
 def label_mapping(label_list_src, EXPRSSIONS_TYPE_src, EXPRSSIONS_TYPE_trg):
     labels_mapping = []
@@ -668,8 +664,8 @@ def crop(image, random_crop, image_size):
         (h, v) = (np.random.randint(-diff_h, diff_h + 1), np.random.randint(-diff_v, diff_v + 1))
 
         image = image[(sz1+h-crop_size):(sz1+h+crop_size ), (sz2+v-crop_size):(sz2+v+crop_size ), :]
-    else:
-        print("Image size is small than crop image size!")
+    # else:
+    #     print("Image size is small than crop image size!")
 
     return image
 
@@ -812,6 +808,22 @@ def load_model(model_dir, meta_file, ckpt_file):
     saver = tf.train.import_meta_graph(os.path.join(model_dir_exp, meta_file))
     saver.restore(tf.get_default_session(), os.path.join(model_dir_exp, ckpt_file))
 
+def load_data(image_paths, do_random_crop, do_random_flip, image_size, do_prewhiten=True, do_resize=True):
+    nrof_samples = len(image_paths)
+    images = np.zeros((nrof_samples, image_size, image_size, 3))
+    for i in range(nrof_samples):
+        img = misc.imread(image_paths[i])
+        if img.ndim == 2:
+            img = to_rgb(img)
+        if do_prewhiten:
+            img = prewhiten(img)
+        img = crop(img, do_random_crop, image_size)
+        img = flip(img, do_random_flip)
+        if do_resize:
+            img = cv2.resize(img, (image_size, image_size), interpolation=cv2.INTER_NEAREST)
+        images[i,:,:,:] = img
+
+    return images
 
 def load_data_im(imgs, do_random_crop, do_random_flip, image_size, do_prewhiten=True):
     # nrof_samples = len(image_paths)
@@ -835,7 +847,7 @@ def load_data_im(imgs, do_random_crop, do_random_flip, image_size, do_prewhiten=
 
         if len(img):
             if img.ndim == 2:
-                img = facenet.to_rgb(img)
+                img = to_rgb(img)
             if do_prewhiten:
                 img = prewhiten(img)
             img = crop(img, do_random_crop, image_size)

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdf5f96c-f066-49a6-ad80-aff8f0353e30" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/IdentitySplit_3th_10fold_ckpluspairs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/learning_rate_schedule_classifier_ckplus_best.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/det1.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/det2.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/det3.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/images/Anthony_Hopkins_0001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/images/Anthony_Hopkins_0002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/learning_rate_schedule_classifier_casia.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/learning_rate_schedule_classifier_msceleb.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/pairs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/src.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/EvaluationTools/Curve_Development.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/EvaluationTools/Development.Random.Est.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/EvaluationTools/PrecisionCoverageEst.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/align_dataset_mtcnn.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/detect_face.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/mtcnn.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/mtcnn_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align_dlib.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/calculate_filtering_metrics.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/compare.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/decode_msceleb_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/decode_msceleb_dataset_dev.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/decode_msceleb_dataset_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/download_vgg_face_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet_train_classifier.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet_train_classifier_tripletloss.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet_train_softmax.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/freeze_graph.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/lfw.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/inception_resnet_v1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/inception_resnet_v2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/network.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn4.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn4_small2_v1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/test_invariance_on_lfw.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/validate_on_lfw.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/visualize.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/batch_norm_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/center_loss_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/decov_loss_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/restore_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/train_join_batch_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/train_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/triplet_loss_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/align_dataset.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/cacd2000_split_identities.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/calculate_embeddings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/dataset_read_speed.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/deepdream.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/detect_face_v1.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/detect_face_v2.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/funnel_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/invariance_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/mnist_center_loss.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/mnist_noise_labels.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/mtcnn_test_pnet_dbg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/parameters" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/pilatus800.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/random_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/rename_casia_directories.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/seed_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/select_triplets_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/test_align.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/vggface16.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/vggverydeep19.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/visualize_vgg_model.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/visualize_vggface.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/util/plot_learning_curves.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/batch_represent.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/cluster.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/clustering.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/export_embeddings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/face.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/predict.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/real_time_face_recognition.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/images/Anthony_Hopkins_0001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/images/Anthony_Hopkins_0002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/learning_rate_retrain_tripletloss.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/learning_rate_schedule_classifier_casia.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/learning_rate_schedule_classifier_msceleb.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/pairs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/align_dataset_mtcnn.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/det1.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/det2.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/det3.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/detect_face.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/calculate_filtering_metrics.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/classifier.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/compare.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/decode_msceleb_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/download_and_extract.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/facenet.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/freeze_graph.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/calculate_attribute_vectors.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/calculate_dataset_normalization.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/dfc_vae.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/dfc_vae_large.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/dfc_vae_resnet.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/vae_base.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/modify_attribute.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/train_vae.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/lfw.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/inception_resnet_v1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/inception_resnet_v2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/squeezenet.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/train_softmax.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/train_tripletloss.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/validate_on_lfw.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/batch_norm_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/center_loss_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/decov_loss_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/restore_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/train_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/triplet_loss_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/align_dataset.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/align_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/align_dlib.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/cacd2000_split_identities.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/dataset_read_speed.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/deepdream.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/detect_face_v1.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/detect_face_v2.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/download_vgg_face_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/funnel_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/invariance_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mnist_center_loss.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mnist_noise_labels.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mtcnn.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mtcnn_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mtcnn_test_pnet_dbg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/network.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn4.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn4_small2_v1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/pilatus800.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/random_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/rename_casia_directories.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/seed_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/select_triplets_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/test1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/test_align.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/test_invariance_on_lfw.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/vggface16.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/vggverydeep19.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/visualize.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/visualize_vgg_model.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/visualize_vggface.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/util/plot_learning_curves.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_addcnns_simple_joint_v4_dynamic_L1L2L3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_olddynamic_L1L2L3_ck+.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_olddynamic_L1L2L3_oulu.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/.inception_resnet_v1_expression.py.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/.inception_resnet_v1_expression_simple_branchcut.py.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/ExponentialMovingAverage_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_cari_vis.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_expression.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_expression_distinguer_simple.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_expression_simple_branchcut.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_simple.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_simple_tf012.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_simple_v2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/network.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn4.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn4_small2_v1.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" afterPath="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/facenet_ext.py" afterPath="$PROJECT_DIR$/src/facenet_ext.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lfw_ext.py" afterPath="$PROJECT_DIR$/src/lfw_ext.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/metrics_loss.py" afterPath="$PROJECT_DIR$/src/metrics_loss.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/train_BP.py" afterPath="$PROJECT_DIR$/src/train_BP.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-885">
+              <caret line="340" column="0" lean-forward="true" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1920" />
+    <option name="y" value="31" />
+    <option name="width" value="1920" />
+    <option name="height" value="1017" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dynamic_multi-task-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" />
+  </component>
+  <component name="RunManager" selected="Python.facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/py2.7_tf1.6/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dynamic_multi-task-learning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" />
+      <option name="PARAMETERS" value="--logs_base_dir /data/zming/logs/expression --models_base_dir /data/zming/models/expression --data_dir /data/zming/datasets/Oulu-Casia/VL_Strong_mtcnnpy_182_160 --labels_expression /data/zming/datasets/Oulu-Casia/Emotion_labels_VIS_Strong_Six.txt --image_size 160 --model_def ./models/inception_resnet_v1_expression_simple.py --optimizer RMSProp --learning_rate -1 --max_nrof_epochs 10000 --keep_probability 0.5 --learning_rate_schedule_file ../data/learning_rate_schedule_classifier_oulucasia.txt --weight_decay 5e-5 --center_loss_factor 1e-1 --center_loss_alfa 0.5 --gpu_memory_fraction 0.7 --epoch_size 100 --batch_size 90 --pretrained_model /data/zming/models/expression/20180113-231253/best_model --lfw_dir /data/zming/datasets/lfw/lfw_mtcnnpy_160 --nfold 10 --ifold 4 --learning_rate_decay_epochs 5 --expr_pairs ../data/IdentitySplit_4th_10fold_oulucasiapairs_Six.txt --learning_rate 1e-4" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdf5f96c-f066-49a6-ad80-aff8f0353e30" name="Default" comment="" />
+      <created>1555496169643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555496169643</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="31" width="1920" height="1017" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3809524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-885">
+          <caret line="340" column="0" lean-forward="true" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
