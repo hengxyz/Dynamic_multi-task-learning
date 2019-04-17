@@ -1,7 +1,8 @@
 # Multi-Task Learning Using Dynamic Weights of Tasks for Face Recognition withFacial Expression
 This demo shows the function of the ulti-Task Learning Using Dynamic Weights of Tasks for Face Recognition withFacial Expression, which   simultaneously  perform  face  recognition  with  facialexpression and facial expression recognition with dynamic weights of tasks.  The dynamic weights of tasks can generate automatically with  a softmax like structure so called dynamic-weights-unit according to the difficulty of the training of tasks. No more hyperparameters are introduced for generating the dynamic weights. The demo is realized in TensorFlow1.6, Python 2.7 and openCV 3.0 under Unbuntu 16.4. The proposed architecture is shown in ![Fig.1](https://github.com/hengxyz/Dynamic_multi-task-learning/blob/master/figs/fig1.png).
 
-## Dynamic weights for better training the hard task in the multi-task learning. As shown in ![Fig.2](https://github.com/hengxyz/Dynamic_multi-task-learning/blob/master/figs/fig2.png), the hard task with larger loss is always assigne with the larger weight of the task which force the networks to train the hard task primarily instead of the over-training of the easy task. In this way, the training of the multi-task is more efficient. 
+## Dynamic weights in multi-task learning 
+The generating dynamic weights can automatically focus on the training of the hard task in the multi-task learning. As shown in ![Fig.2](https://github.com/hengxyz/Dynamic_multi-task-learning/blob/master/figs/fig2.png), the hard task with larger loss is always assigne with the larger weight of the task which force the networks to train the hard task primarily instead of the over-training of the easy task. In this way, the training of the multi-task is more efficient. 
 
 
 ## Dependencies
