@@ -1,10 +1,8 @@
-### Joint Learning FaceLiveNet: FaceLiveNet 2.0 #########
-#### This is joint learning version of the FaceLiveNet rather than the Independant Transfer Learning FaceLiveNet.
-#### The difference is: Joint learning will train the face verification task and the facial expression recognition task
-#### simultaneous rather than the indepednant training of the two tasks in the Transfer Learning FaceLiveNet
-#### The object is to improve the problem of the degrade of the performance of the previous version FaceLiveNet
-#### when the expressional facial images used as the input for face verification task.
-
+###########################################################################################################
+### Multi-Task Learning Using Dynamic Weights of Tasks for Face Recognition with Facial Expression #########
+#### The multi-task learning with dynamic wiehgts of tasks can automatically train the hard task primarily, 
+#### in which the dynamic weights are generated automatically by the dynamic-weight-unit with its loss function to update.
+####
 ##
 ##############################  FACIAL EXPRESSION DATASETS   ##############################
 ### FER2013(unconstrained/webimages): 0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral
@@ -98,41 +96,6 @@ def main(args):
 
     np.random.seed(seed=args.seed)
     random.seed(args.seed)
-
-    # ## get data from FER2013.csv
-    # label = []
-    # phrase = []
-    # with open('/data/zming/datasets/fer2013/fer2013.csv', 'rb') as csvfile:
-    #     reader = csv.reader(csvfile, delimiter=',', quotechar='|')
-    #     header = next(reader)
-    #     k = 0
-    #     with open('/data/zming/datasets/fer2013/emotionlabel.txt','w') as f:
-    #         f.write("No. Emotion Usage\n")
-    #         for row in reader:
-    #             k +=1
-    #             label.append(row[0])
-    #             img = row[1]
-    #             img = img.split(' ')
-    #             img = [int(i) for i in img]
-    #             img = np.array(img)
-    #             img = img.reshape(48,48)
-    #             img = cv2.resize(img, (160,160))
-    #             filename = "/data/zming/datasets/fer2013/raw_160/%05d.png"%k
-    #             cv2.imwrite(filename, img)
-    #             phrase.append(row[2])
-    #             f.write("%d %s %s\n"%(k, row[0],row[2]))
-    #             print("%d\n"%k)
-
-
-
-
-    #train_set = facenet.get_dataset(args.data_dir)
-    #train_set = facenet.get_huge_dataset(args.data_dir, args.trainset_start, args.trainset_end)
-    #nrof_classes = len(train_set)
-    
-    # Get a list of image paths and their labels
-    #image_list, label_list = facenet.get_image_paths_and_labels(train_set)
-    #image_list, label_list = facenet.get_image_paths_and_labels_expression(train_set, args.labels_expression)
 
     ###########################   FER2013    ##########################
     # image_list, label_list, usage_list, nrof_classes = facenet_ext.get_image_paths_and_labels_fer2013(args.data_dir,
