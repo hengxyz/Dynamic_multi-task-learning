@@ -870,8 +870,9 @@ def calculate_roc(thresholds, embeddings1, embeddings2, actual_issame, nrof_fold
     assert (embeddings1.shape[1] == embeddings2.shape[1])
     nrof_pairs = min(len(actual_issame), embeddings1.shape[0])
     nrof_thresholds = len(thresholds)
-    folds = KFold(n=nrof_pairs, n_folds=nrof_folds, shuffle=False)
+    #folds = KFold(n=nrof_pairs, n_folds=nrof_folds, shuffle=False) ##sklearn 0.1
     # folds = KFold(n=nrof_pairs, n_folds=nrof_folds, shuffle=True, seed=666)
+    folds = KFold(n_split=nrof_folds)
 
     tprs = np.zeros((nrof_folds, nrof_thresholds))
     fprs = np.zeros((nrof_folds, nrof_thresholds))
@@ -881,7 +882,7 @@ def calculate_roc(thresholds, embeddings1, embeddings2, actual_issame, nrof_fold
     diff = np.subtract(embeddings1, embeddings2)
     dist = np.sum(np.square(diff), 1)
 
-    for fold_idx, (train_set, test_set) in enumerate(folds):
+    for fold_idx, (train_set, test_set) in enumerate(folds.split(range(nrof_pairs))):
 
         # Find the best threshold for the fold
         acc_train = np.zeros((nrof_thresholds))

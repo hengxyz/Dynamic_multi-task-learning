@@ -33,8 +33,8 @@
       <file leaf-file-name="facenet_ext.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/facenet_ext.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="874" column="19" lean-forward="false" selection-start-line="874" selection-start-column="19" selection-end-line="874" selection-end-column="19" />
               <folding>
                 <element signature="e#170#208#0" expanded="true" />
               </folding>
@@ -353,7 +353,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="23" width="1920" height="1017" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24275935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -463,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/facenet_ext.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+        <state relative-caret-position="286">
+          <caret line="874" column="19" lean-forward="false" selection-start-line="874" selection-start-column="19" selection-end-line="874" selection-end-column="19" />
           <folding>
             <element signature="e#170#208#0" expanded="true" />
           </folding>
