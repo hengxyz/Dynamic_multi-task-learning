@@ -16,7 +16,6 @@ from tensorflow.python.framework import ops
 import numpy as np
 from scipy import misc
 import matplotlib.pyplot as plt
-from sklearn.cross_validation import KFold
 from scipy import interpolate
 from tensorflow.python.training import training
 import random

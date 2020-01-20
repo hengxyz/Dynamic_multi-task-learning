@@ -15,7 +15,8 @@ from tensorflow.python.framework import ops
 import numpy as np
 from scipy import misc
 import matplotlib.pyplot as plt
-from sklearn.cross_validation import KFold
+#from sklearn.cross_validation import KFold
+from sklearn.model_selection  import KFold
 from scipy import interpolate
 from tensorflow.python.training import training
 import random
@@ -229,10 +230,12 @@ def get_image_paths_and_labels_oulucasia(images_path, labels_expression, usage, 
                 sub_imgs[idx_subj].append(idx_sub)
 
     # folds = KFold(n=len(labels_flat), n_folds=nrof_folds, shuffle=True)
-    folds = KFold(n=nrof_subj, n_folds=nfold, shuffle=False)
+    #folds = KFold(n=nrof_subj, n_folds=nfold, shuffle=False) ##sklearn 0.1
+    folds = KFold(n_folds=nfold, shuffle=False) ## skearn 0.2
 
     i = 0
-    for idx_train_sub, idx_test_sub in folds:
+    #for idx_train_sub, idx_test_sub in folds:
+    for idx_train_sub, idx_test_sub in folds.split(subjects):
         idx_train_sub_all.append([])
         idx_train_sub_all[i].append(idx_train_sub)
         idx_test_sub_all.append([])
@@ -316,10 +319,12 @@ def get_image_paths_and_labels_joint_oulucasia(images_path, labels_expression, u
                 sub_imgs[idx_subj].append(idx_sub)
 
     # folds = KFold(n=len(labels_flat), n_folds=nrof_folds, shuffle=True)
-    folds = KFold(n=nrof_subj, n_folds=nfold, shuffle=False)
+    #folds = KFold(n=nrof_subj, n_folds=nfold, shuffle=False) ## skearn 0.1
+    folds = KFold(n_splits=nfold) ## skearn 0.2
 
     i = 0
-    for idx_train_sub, idx_test_sub in folds:
+    #for idx_train_sub, idx_test_sub in folds:
+    for idx_train_sub, idx_test_sub in folds.split(subjects):
         idx_train_sub_all.append([])
         idx_train_sub_all[i].append(idx_train_sub)
         idx_test_sub_all.append([])
@@ -812,7 +817,10 @@ def load_data(image_paths, do_random_crop, do_random_flip, image_size, do_prewhi
     nrof_samples = len(image_paths)
     images = np.zeros((nrof_samples, image_size, image_size, 3))
     for i in range(nrof_samples):
-        img = misc.imread(image_paths[i])
+        #img = misc.imread(image_paths[i])
+        img = cv2.imread(image_paths[i])
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
         if img.ndim == 2:
             img = to_rgb(img)
         if do_prewhiten:

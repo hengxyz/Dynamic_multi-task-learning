@@ -2,206 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf5f96c-f066-49a6-ad80-aff8f0353e30" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/IdentitySplit_3th_10fold_ckpluspairs.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/learning_rate_schedule_classifier_ckplus_best.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/det1.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/det2.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/det3.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/images/Anthony_Hopkins_0001.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/images/Anthony_Hopkins_0002.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/learning_rate_schedule_classifier_casia.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/learning_rate_schedule_classifier_msceleb.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/data/pairs.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/src.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/EvaluationTools/Curve_Development.config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/EvaluationTools/Development.Random.Est.tsv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/EvaluationTools/PrecisionCoverageEst.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/align_dataset_mtcnn.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/detect_face.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/mtcnn.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align/mtcnn_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/align_dlib.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/calculate_filtering_metrics.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/compare.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/decode_msceleb_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/decode_msceleb_dataset_dev.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/decode_msceleb_dataset_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/download_vgg_face_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet_train_classifier.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet_train_classifier_tripletloss.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/facenet_train_softmax.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/freeze_graph.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/lfw.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/inception_resnet_v1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/inception_resnet_v2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/network.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn3.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn4.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/models/nn4_small2_v1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/test_invariance_on_lfw.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/validate_on_lfw.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/src/visualize.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/batch_norm_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/center_loss_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/decov_loss_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/restore_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/train_join_batch_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/train_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/test/triplet_loss_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/align_dataset.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/cacd2000_split_identities.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/calculate_embeddings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/dataset_read_speed.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/deepdream.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/detect_face_v1.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/detect_face_v2.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/funnel_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/invariance_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/mnist_center_loss.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/mnist_noise_labels.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/mtcnn_test_pnet_dbg.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/parameters" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/pilatus800.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/random_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/rename_casia_directories.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/seed_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/select_triplets_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/test_align.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/vggface16.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/vggverydeep19.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/visualize_vgg_model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/tmp/visualize_vggface.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet/util/plot_learning_curves.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/batch_represent.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/cluster.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/clustering.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/export_embeddings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/face.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/predict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/contributed/real_time_face_recognition.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/images/Anthony_Hopkins_0001.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/images/Anthony_Hopkins_0002.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/learning_rate_retrain_tripletloss.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/learning_rate_schedule_classifier_casia.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/learning_rate_schedule_classifier_msceleb.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/data/pairs.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/requirements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/align_dataset_mtcnn.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/det1.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/det2.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/det3.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/align/detect_face.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/calculate_filtering_metrics.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/classifier.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/compare.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/decode_msceleb_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/download_and_extract.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/facenet.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/freeze_graph.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/calculate_attribute_vectors.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/calculate_dataset_normalization.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/dfc_vae.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/dfc_vae_large.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/dfc_vae_resnet.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/models/vae_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/modify_attribute.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/generative/train_vae.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/lfw.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/inception_resnet_v1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/inception_resnet_v2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/models/squeezenet.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/train_softmax.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/train_tripletloss.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/src/validate_on_lfw.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/batch_norm_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/center_loss_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/decov_loss_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/restore_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/train_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/test/triplet_loss_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/align_dataset.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/align_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/align_dlib.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/cacd2000_split_identities.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/dataset_read_speed.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/deepdream.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/detect_face_v1.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/detect_face_v2.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/download_vgg_face_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/funnel_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/invariance_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mnist_center_loss.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mnist_noise_labels.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mtcnn.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mtcnn_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/mtcnn_test_pnet_dbg.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/network.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn3.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn4.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/nn4_small2_v1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/pilatus800.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/random_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/rename_casia_directories.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/seed_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/select_triplets_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/test1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/test_align.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/test_invariance_on_lfw.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/vggface16.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/vggverydeep19.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/visualize.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/visualize_vgg_model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/tmp/visualize_vggface.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/facenet_20170513/util/plot_learning_curves.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_addcnns_simple_joint_v4_dynamic_L1L2L3.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_olddynamic_L1L2L3_ck+.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_olddynamic_L1L2L3_oulu.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/.inception_resnet_v1_expression.py.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/.inception_resnet_v1_expression_simple_branchcut.py.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/ExponentialMovingAverage_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_cari_vis.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_expression.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_expression_distinguer_simple.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_expression_simple_branchcut.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_simple.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_simple_tf012.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v1_simple_v2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/inception_resnet_v2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/network.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn3.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn4.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/nn4_small2_v1.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" afterPath="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/facenet_ext.py" afterPath="$PROJECT_DIR$/src/facenet_ext.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lfw_ext.py" afterPath="$PROJECT_DIR$/src/lfw_ext.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/metrics_loss.py" afterPath="$PROJECT_DIR$/src/metrics_loss.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/train_BP.py" afterPath="$PROJECT_DIR$/src/train_BP.py" />
     </list>
@@ -217,19 +19,51 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-885">
-              <caret line="340" column="0" lean-forward="true" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+            <state relative-caret-position="151">
+              <caret line="1245" column="53" lean-forward="true" selection-start-line="1245" selection-start-column="53" selection-end-line="1245" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="facenet_ext.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/facenet_ext.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+              <folding>
+                <element signature="e#170#208#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics_loss.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metrics_loss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train_BP.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/train_BP.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdentitySplit_4th_10fold_oulucasiapairs_Six.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/IdentitySplit_4th_10fold_oulucasiapairs_Six.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -243,14 +77,26 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>loss_weight_base1</find>
+      <find>random_state</find>
+      <find>nrof_subj</find>
+      <find>KFold</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/train_BP.py" />
+        <option value="$PROJECT_DIR$/src/metrics_loss.py" />
+        <option value="$PROJECT_DIR$/src/facenet_ext.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1920" />
-    <option name="y" value="31" />
+    <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1017" />
   </component>
@@ -269,6 +115,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,12 +177,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -477,7 +323,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/py2.7_tf1.6/bin/python" />
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/py3_tf1.13/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -506,19 +352,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="31" width="1920" height="1017" extended-state="0" />
-    <editor active="true" />
+    <frame x="1920" y="23" width="1920" height="1017" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24275935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38079828" sideWeight="0.5018431" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3809524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38079828" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -532,13 +378,36 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/facenet_ext.py</url>
+          <line>237</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/facenet_ext.py</url>
+          <line>820</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-885">
+        <state relative-caret-position="4560">
           <caret line="340" column="0" lean-forward="true" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
           <folding />
         </state>
@@ -549,6 +418,56 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/IdentitySplit_4th_10fold_oulucasiapairs_Six.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/facenet_expression_realdynamic_L1L2L3_ck+_oulu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="1245" column="53" lean-forward="true" selection-start-line="1245" selection-start-column="53" selection-end-line="1245" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/train_BP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metrics_loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/facenet_ext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+          <folding>
+            <element signature="e#170#208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
