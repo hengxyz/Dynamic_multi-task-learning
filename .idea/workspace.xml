@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdf5f96c-f066-49a6-ad80-aff8f0353e30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/facenet_ext.py" afterPath="$PROJECT_DIR$/src/facenet_ext.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/metrics_loss.py" afterPath="$PROJECT_DIR$/src/metrics_loss.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/train_BP.py" afterPath="$PROJECT_DIR$/src/train_BP.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +30,8 @@
       <file leaf-file-name="facenet_ext.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/facenet_ext.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="874" column="19" lean-forward="false" selection-start-line="874" selection-start-column="19" selection-end-line="874" selection-end-column="19" />
+            <state relative-caret-position="121">
+              <caret line="863" column="31" lean-forward="true" selection-start-line="863" selection-start-column="31" selection-end-line="863" selection-end-column="31" />
               <folding>
                 <element signature="e#170#208#0" expanded="true" />
               </folding>
@@ -353,9 +350,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="23" width="1920" height="1017" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24275935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24275935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38079828" sideWeight="0.5018431" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -463,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/facenet_ext.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="874" column="19" lean-forward="false" selection-start-line="874" selection-start-column="19" selection-end-line="874" selection-end-column="19" />
+        <state relative-caret-position="121">
+          <caret line="863" column="31" lean-forward="true" selection-start-line="863" selection-start-column="31" selection-end-line="863" selection-end-column="31" />
           <folding>
             <element signature="e#170#208#0" expanded="true" />
           </folding>
