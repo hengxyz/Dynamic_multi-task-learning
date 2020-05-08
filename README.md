@@ -39,7 +39,7 @@ python facenet_expression_realdynamic_L1L2L3_ck+_oulu.py --logs_base_dir /data/z
 --labels_expression: the labels of the facial expressions of the images  
 --image_size: the required image size for training  
 --model_def: the networks architecutre used in this work  
---optimizer: optimizer for the BP of the parameters of CNNs  
+--optimizer: optimizer for the BP of the parameters of CNNs    
 --learning_rate: setting of learning rate, if it is <0, the configuration file --learning_rate_schedule_file for setting the learning will be used  
 --pretrained_model: the path to the pretrained model  
 --center_loss_factor : centerloss weight in the full loss function  
