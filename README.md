@@ -34,16 +34,16 @@ Training & Evaluation the model:
 python facenet_expression_realdynamic_L1L2L3_ck+_oulu.py --logs_base_dir /data/zming/logs/expression --models_base_dir /data/zming/models/expression --data_dir /data/zming/datasets/Oulu-Casia/VL_Strong_mtcnnpy_182_160 --labels_expression /data/zming/datasets/Oulu-Casia/Emotion_labels_VIS_Strong_Six.txt --image_size 160 --model_def ./models/inception_resnet_v1_expression_simple.py --optimizer RMSProp --learning_rate -1 --max_nrof_epochs 10000 --keep_probability 0.5 --learning_rate_schedule_file ../data/learning_rate_schedule_classifier_oulucasia.txt --weight_decay 5e-5 --center_loss_factor 1e-1 --center_loss_alfa 0.5 --gpu_memory_fraction 0.7 --epoch_size 100 --batch_size 90 --pretrained_model /data/zming/models/expression/20180113-231253/best_model --lfw_dir /data/zming/datasets/lfw/lfw_mtcnnpy_160 --nfold 10 --ifold 4 --learning_rate_decay_epochs 5 --expr_pairs ../data/IdentitySplit_4th_10fold_oulucasiapairs_Six.txt --learning_rate 1e-4
 
 ## parameters:
---logs_base_dir, --models_base_dir: the path to save the log and training model
---data_dir: training images 
---labels_expression: the labels of the facial expressions of the images
---image_size: the required image size for training
---model_def: the networks architecutre used in this work
---optimizer: optimizer for the BP of the parameters of CNNs
---learning_rate: setting of learning rate, if it is <0, the configuration file --learning_rate_schedule_file for setting the learning will be used
---pretrained_model: the path to the pretrained model
---center_loss_factor : centerloss weight in the full loss function
---expr_pairs: the evaluation pairs used for face verification with facial expression
+--logs_base_dir, --models_base_dir: the path to save the log and training model  
+--data_dir: training images  
+--labels_expression: the labels of the facial expressions of the images  
+--image_size: the required image size for training  
+--model_def: the networks architecutre used in this work  
+--optimizer: optimizer for the BP of the parameters of CNNs  
+--learning_rate: setting of learning rate, if it is <0, the configuration file --learning_rate_schedule_file for setting the learning will be used  
+--pretrained_model: the path to the pretrained model  
+--center_loss_factor : centerloss weight in the full loss function  
+--expr_pairs: the evaluation pairs used for face verification with facial expression  
 
 
 ### Citation
